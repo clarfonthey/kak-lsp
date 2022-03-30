@@ -17,3 +17,4 @@ pub mod selection_range;
 pub mod semantic_tokens;
 pub mod signature_help;
 pub mod texlab;
+pub mod inlay_hints;
