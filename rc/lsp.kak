@@ -1159,7 +1159,7 @@ incomingOrOutgoing = $1
 }
 
 
-define-command lsp-inlay-hints -docstring "lsp-inlay-hints: Request inlay hints (lsp)" %{
+define-command lsp-inlay-hints -docstring "lsp-inlay-hints: request inlay hints" %{
   lsp-did-change-and-then lsp-inlay-hints-request
 }
 
