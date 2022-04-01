@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use lsp_types::{
     request::{InlayHintRequest, Request},
     InlayHint, InlayHintLabel, InlayHintParams, Position, Range, TextDocumentIdentifier, Url,
@@ -93,7 +94,6 @@ pub fn inlay_hints_response(meta: EditorMeta, inlay_hints: Vec<InlayHint>, ctx: 
                 ))
             },
         )
-        .collect::<Vec<String>>()
         .join(" ");
     let command = format!("set buffer lsp_inlay_hints {} {}", meta.version, ranges);
     let command = format!(
